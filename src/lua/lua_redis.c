@@ -17,8 +17,8 @@
 #include "lua_thread_pool.h"
 #include "utlist.h"
 
-#include "contrib/hiredis/hiredis.h"
-#include "contrib/hiredis/async.h"
+#include <hiredis.h>
+#include <async.h>
 
 #define REDIS_DEFAULT_TIMEOUT 1.0
 

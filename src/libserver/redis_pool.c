@@ -18,9 +18,9 @@
 #include "contrib/libev/ev.h"
 #include "redis_pool.h"
 #include "cfg_file.h"
-#include "contrib/hiredis/hiredis.h"
-#include "contrib/hiredis/async.h"
-#include "contrib/hiredis/adapters/libev.h"
+#include <hiredis.h>
+#include <async.h>
+#include <adapters/libev.h>
 #include "cryptobox.h"
 #include "logger.h"
 

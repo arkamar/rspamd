@@ -22,8 +22,8 @@
 #include "cryptobox.h"
 #include "str_util.h"
 #include "upstream.h"
-#include "contrib/hiredis/hiredis.h"
-#include "contrib/hiredis/async.h"
+#include <hiredis.h>
+#include <async.h>
 #include "lua/lua_common.h"
 
 #define REDIS_DEFAULT_PORT 6379

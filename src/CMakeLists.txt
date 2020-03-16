@@ -190,7 +190,6 @@ ENDIF()
 IF (ENABLE_SNOWBALL MATCHES "ON")
 	TARGET_LINK_LIBRARIES(rspamd-server stemmer)
 ENDIF()
-TARGET_LINK_LIBRARIES(rspamd-server rspamd-hiredis)
 
 IF (ENABLE_FANN MATCHES "ON")
 	TARGET_LINK_LIBRARIES(rspamd-server fann)
