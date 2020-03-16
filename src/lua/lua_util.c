@@ -17,7 +17,7 @@
 #include "html.h"
 #include "tokenizers/tokenizers.h"
 #include "unix-std.h"
-#include "contrib/zstd/zstd.h"
+#include <zstd.h>
 #include "contrib/uthash/utlist.h"
 #include "libmime/email_addr.h"
 #include "libmime/content_type.h"

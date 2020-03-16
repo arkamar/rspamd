@@ -25,7 +25,7 @@
 #include "stat_api.h"
 #include "unix-std.h"
 #include "utlist.h"
-#include "contrib/zstd/zstd.h"
+#include <zstd.h>
 #include "libserver/mempool_vars_internal.h"
 #include "libserver/cfg_file_private.h"
 #include "libmime/lang_detection.h"

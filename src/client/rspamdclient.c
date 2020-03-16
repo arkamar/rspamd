@@ -19,7 +19,7 @@
 #include "libserver/http/http_private.h"
 #include "libserver/protocol_internal.h"
 #include "unix-std.h"
-#include "contrib/zstd/zstd.h"
+#include <zstd.h>
 
 #ifdef HAVE_FETCH_H
 #include <fetch.h>

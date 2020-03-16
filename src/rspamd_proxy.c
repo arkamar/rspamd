@@ -36,7 +36,7 @@
 #include "libserver/milter.h"
 #include "libserver/milter_internal.h"
 #include "libmime/lang_detection.h"
-#include "contrib/zstd/zstd.h"
+#include <zstd.h>
 
 #include <math.h>
 

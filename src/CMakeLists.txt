@@ -181,7 +181,6 @@ TARGET_LINK_LIBRARIES(rspamd-server rspamd-http-parser)
 TARGET_LINK_LIBRARIES(rspamd-server rspamd-fpconv)
 TARGET_LINK_LIBRARIES(rspamd-server rspamd-cdb)
 TARGET_LINK_LIBRARIES(rspamd-server lcbtrie)
-TARGET_LINK_LIBRARIES(rspamd-server rspamd-zstd)
 TARGET_LINK_LIBRARIES(rspamd-server rspamd-fastutf8)
 
 IF (ENABLE_CLANG_PLUGIN MATCHES "ON")

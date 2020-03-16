@@ -21,7 +21,7 @@
 #include "worker_private.h"
 #include "libserver/cfg_file_private.h"
 #include "libmime/scan_result_private.h"
-#include "contrib/zstd/zstd.h"
+#include <zstd.h>
 #include "lua/lua_common.h"
 #include "unix-std.h"
 #include "protocol_internal.h"

@@ -23,7 +23,7 @@
 #include "libserver/http/http_connection.h"
 #include "libserver/http/http_private.h"
 #include "rspamd.h"
-#include "contrib/zstd/zstd.h"
+#include <zstd.h>
 #include "contrib/libev/ev.h"
 #include "contrib/uthash/utlist.h"
 

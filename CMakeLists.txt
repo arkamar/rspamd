@@ -198,6 +198,8 @@ ELSE()
 		ROOT ${PCRE_ROOT_DIR} MODULES pcre libpcre pcre3 libpcre3)
 ENDIF()
 
+ProcessPackage(ZSTD LIBRARY zstd INCLUDE zstd.h
+	ROOT ${ZSTD_ROOT_DIR} MODULES libzstd)
 ProcessPackage(SQLITE3 LIBRARY sqlite3 INCLUDE sqlite3.h INCLUDE_SUFFIXES include/sqlite3 include/sqlite
 	ROOT ${SQLITE3_ROOT_DIR} MODULES sqlite3 sqlite)
 ProcessPackage(ICUDATA LIBRARY icudata INCLUDE unicode/ucnv.h
@@ -615,7 +617,6 @@ ADD_SUBDIRECTORY(contrib/http-parser)
 ADD_SUBDIRECTORY(contrib/fpconv)
 ADD_SUBDIRECTORY(contrib/lc-btrie)
 ADD_SUBDIRECTORY(contrib/libottery)
-ADD_SUBDIRECTORY(contrib/zstd)
 IF(ENABLE_SNOWBALL MATCHES "ON")
 	ADD_SUBDIRECTORY(contrib/snowball)
 	SET(WITH_SNOWBALL 1)
