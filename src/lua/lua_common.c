@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 #include "lua_common.h"
-#include "lptree.h"
 #include "utlist.h"
 #include "unix-std.h"
 #include "ottery.h"
@@ -922,10 +921,6 @@ rspamd_lua_wipe_realloc (void *ud,
 	return NULL;
 }
 
-#ifndef WITH_LUAJIT
-extern int luaopen_bit(lua_State *L);
-#endif
-
 lua_State *
 rspamd_lua_init (bool wipe_mem)
 {
@@ -981,7 +976,6 @@ rspamd_lua_init (bool wipe_mem)
 	luaopen_spf (L);
 	luaopen_tensor (L);
 #ifndef WITH_LUAJIT
-	rspamd_lua_add_preload (L, "bit", luaopen_bit);
 	lua_settop (L, 0);
 #endif
 
@@ -991,7 +985,6 @@ rspamd_lua_init (bool wipe_mem)
 	rspamd_lua_new_class (L, "rspamd{session}", NULL);
 	lua_pop (L, 1);
 
-	rspamd_lua_add_preload (L, "lpeg", luaopen_lpeg);
 	luaopen_ucl (L);
 	rspamd_lua_add_preload (L, "ucl", luaopen_ucl);
 

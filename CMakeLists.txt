@@ -111,7 +111,6 @@ INCLUDE_DIRECTORIES("${CMAKE_SOURCE_DIR}/"
 		"${CMAKE_SOURCE_DIR}/contrib/librdns"
 		"${CMAKE_SOURCE_DIR}/contrib/aho-corasick"
 		"${CMAKE_SOURCE_DIR}/contrib/lc-btrie"
-		"${CMAKE_SOURCE_DIR}/contrib/lua-lpeg"
 		"${CMAKE_BINARY_DIR}/src" #Stored in the binary dir
 		"${CMAKE_BINARY_DIR}/src/libcryptobox")
 
@@ -624,17 +623,12 @@ ENDIF()
 ADD_SUBDIRECTORY(contrib/libucl)
 ADD_SUBDIRECTORY(contrib/librdns)
 ADD_SUBDIRECTORY(contrib/aho-corasick)
-ADD_SUBDIRECTORY(contrib/lua-lpeg)
 ADD_SUBDIRECTORY(contrib/t1ha)
 ADD_SUBDIRECTORY(contrib/libev)
 ADD_SUBDIRECTORY(contrib/kann)
 ADD_SUBDIRECTORY(contrib/fastutf8)
 ADD_SUBDIRECTORY(contrib/google-ced)
 
-
-IF (NOT WITH_LUAJIT)
-	ADD_SUBDIRECTORY(contrib/lua-bit)
-ENDIF()
 
 IF (ENABLE_LUA_REPL MATCHES "ON")
 	ADD_SUBDIRECTORY(contrib/replxx)
@@ -735,7 +729,6 @@ INSTALL(FILES "contrib/lua-fun/fun.lua" DESTINATION ${LUALIBDIR})
 INSTALL(FILES "contrib/lua-argparse/argparse.lua" DESTINATION ${LUALIBDIR})
 INSTALL(FILES "contrib/lua-tableshape/tableshape.lua" DESTINATION ${LUALIBDIR})
 INSTALL(FILES "contrib/lua-lupa/lupa.lua" DESTINATION ${LUALIBDIR})
-INSTALL(FILES "contrib/lua-lpeg/lpegre.lua" DESTINATION ${LUALIBDIR})
 
 # systemd unit
 IF(CMAKE_SYSTEM_NAME STREQUAL "Linux" AND WANT_SYSTEMD_UNITS MATCHES "ON")
